@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(ApplicationRunner.class)
 @Launcher(name = MainApplication.class)
-public class MainAppTest {
+public class MainApplicationTest {
 
     @Mock
     public Service service;
