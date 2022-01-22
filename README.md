@@ -4,7 +4,7 @@ A little example of how to use guice for create your application with a dependen
 
 Dependency Injection Module
 
-![](https://github.com/robertonav20/guice-dependency-injection/images/classes.png?raw=true)
+![Screenshot](images/classes.png)
 
 - Application Context has the responsibility of to start the application and the dependency manager
 - Dependency Module search and collect all classes marked with Component
@@ -17,8 +17,8 @@ Follow an example of test class
 - Mock create and inject a mocked object instance into test class and tested class
 - TestInstance is mandatory for obtain the instantiated test class
 
-![](https://github.com/robertonav20/guice-dependency-injection/images/mainApplicationTest.png?raw=true)
+![Screenshot](images/mainApplicationTest.png?raw=true)
 
 Another example
 
-![](https://github.com/robertonav20/guice-dependency-injection/images/repositoryTest.png)
+![Screenshot](images/repositoryTest.png)
