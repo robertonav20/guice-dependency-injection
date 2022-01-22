@@ -1,7 +1,7 @@
 package main.application;
 
 import application.context.ApplicationContext;
-import application.context.annotations.Application;
+import application.context.annotations.App;
 import application.context.annotations.OnStart;
 import application.context.annotations.OnStop;
 import main.application.service.NamedService;
@@ -13,7 +13,7 @@ import org.apache.logging.log4j.Logger;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-@Application(folder = "main")
+@App(folder = "main")
 public class MainApplication {
 
     private static final Logger logger = LogManager.getLogger(MainApplication.class);

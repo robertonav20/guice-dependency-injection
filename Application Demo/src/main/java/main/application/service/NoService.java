@@ -1,8 +1,8 @@
 package main.application.service;
 
-import application.context.annotations.ApplicationComponent;
+import application.context.annotations.Component;
 
-@ApplicationComponent
+@Component
 public class NoService {
     public String hello() {
         return this.getClass().getSimpleName();

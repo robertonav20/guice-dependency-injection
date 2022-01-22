@@ -1,11 +1,11 @@
 package main.application.service;
 
-import application.context.annotations.ApplicationComponent;
+import application.context.annotations.Component;
 import main.application.repository.Repository;
 
 import javax.inject.Inject;
 
-@ApplicationComponent
+@Component
 public class ServiceImpl implements Service {
 
     @Inject

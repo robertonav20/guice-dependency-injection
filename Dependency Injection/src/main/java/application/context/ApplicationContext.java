@@ -1,6 +1,6 @@
 package application.context;
 
-import application.context.annotations.Application;
+import application.context.annotations.App;
 import application.context.annotations.OnStart;
 import application.context.annotations.OnStop;
 import application.context.exceptions.ApplicationException;
@@ -31,8 +31,8 @@ final public class ApplicationContext {
     public static void start(Class clazz) throws ApplicationException {
         executor.execute(() -> {
             String packageName = "";
-            if (clazz.getAnnotation(Application.class) != null) {
-                packageName = ((Application) clazz.getAnnotation(Application.class)).folder();
+            if (clazz.getAnnotation(App.class) != null) {
+                packageName = ((App) clazz.getAnnotation(App.class)).folder();
             } else {
                 packageName = clazz.getPackageName();
             }

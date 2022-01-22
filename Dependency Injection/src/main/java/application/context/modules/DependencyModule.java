@@ -1,6 +1,6 @@
 package application.context.modules;
 
-import application.context.annotations.ApplicationComponent;
+import application.context.annotations.Component;
 import com.google.common.reflect.ClassPath;
 import com.google.inject.AbstractModule;
 import com.google.inject.name.Names;
@@ -28,7 +28,7 @@ final class DependencyModule extends AbstractModule {
 		try {
 			Set<Class> classes = ClassPath.from(loader).getTopLevelClassesRecursive(path).stream()
 				.map(c -> c.load())
-				.filter(c -> c.getAnnotation(ApplicationComponent.class) != null)
+				.filter(c -> c.getAnnotation(Component.class) != null)
 				.map(c -> {
 					try {
 						return Class.forName(c.getName());
@@ -41,7 +41,7 @@ final class DependencyModule extends AbstractModule {
 
 			for (Class clazz : classes) {
 				logger.debug("Found {} dependency", clazz.getName());
-				ApplicationComponent annotation = (ApplicationComponent) clazz.getAnnotation(ApplicationComponent.class);
+				Component annotation = (Component) clazz.getAnnotation(Component.class);
 				if (clazz.getInterfaces().length > 0) {
 					Arrays.stream(clazz.getInterfaces()).forEach(i -> {
 						if (annotation.primary()) {

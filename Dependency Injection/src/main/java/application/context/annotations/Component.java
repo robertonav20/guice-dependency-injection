@@ -7,6 +7,7 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface Application {
-    String folder() default "";
+public @interface Component {
+    boolean primary() default true;
+    String alias() default "";
 }

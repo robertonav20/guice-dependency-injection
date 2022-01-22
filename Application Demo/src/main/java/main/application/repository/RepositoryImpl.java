@@ -1,8 +1,8 @@
 package main.application.repository;
 
-import application.context.annotations.ApplicationComponent;
+import application.context.annotations.Component;
 
-@ApplicationComponent
+@Component
 public class RepositoryImpl implements Repository {
     @Override
     public String hello() {

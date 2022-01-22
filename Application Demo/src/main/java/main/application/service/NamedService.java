@@ -1,8 +1,8 @@
 package main.application.service;
 
-import application.context.annotations.ApplicationComponent;
+import application.context.annotations.Component;
 
-@ApplicationComponent(primary = false, alias = "namedService")
+@Component(primary = false, alias = "namedService")
 public class NamedService {
     public String hello() {
         return this.getClass().getSimpleName();
