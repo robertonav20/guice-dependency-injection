@@ -17,8 +17,8 @@ Follow an example of test class
 - Mock create and inject a mocked object instance into test class and tested class
 - TestInstance is mandatory for obtain the instantiated test class
 
-![Screenshot](images/mainApplicationTest.png?raw=true)
+![Screenshot](images/application.png?raw=true)
 
 Another example
 
-![Screenshot](images/repositoryTest.png)
+![Screenshot](images/repository.png)
