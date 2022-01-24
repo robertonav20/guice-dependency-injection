@@ -34,7 +34,7 @@ final public class ApplicationContext {
             if (clazz.getAnnotation(App.class) != null) {
                 packageName = ((App) clazz.getAnnotation(App.class)).folder();
             } else {
-                packageName = clazz.getPackageName();
+                packageName = clazz.getPackage().getName();
             }
             injector = Guice.createInjector(DependencyModuleFactory.create(packageName));
             application = injector.getInstance(clazz);
